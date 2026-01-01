@@ -19,7 +19,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # Step 4: Load the saved model
-model = joblib.load(r"F:\lft\liver_disease_adaboost_pipeline.pkl")
 
 # Step 5: Predict on the test set
 y_test_pred = model.predict(X_test)
@@ -30,3 +29,4 @@ print(classification_report(y_test, y_test_pred))
 print("Confusion Matrix:")
 print(confusion_matrix(y_test, y_test_pred))
 print(f"Accuracy: {accuracy_score(y_test, y_test_pred):.4f}")
+
